@@ -1,0 +1,33 @@
+
+<div class="container">
+	<!---form--->
+	<div class="container-1">
+    <form #submit="ngForm" (ngSubmit)="onSubmit(submit)">
+      <div class="row">
+        <div class="col-25">
+          <label >Username: *</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  name="username" [(ngModel)]="username" placeholder="username" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label >Password: *</label>
+        </div>
+        <div class="col-75">
+          <input type="text" [(ngModel)]="password"  name="password" placeholder="Enter your password" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <button type="submit" [disabled]="!submit.form.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+

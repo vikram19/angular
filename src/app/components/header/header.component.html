@@ -1,0 +1,26 @@
+
+<div id="navbar_nav">
+  <img src="assets/angular-logo.png" alt="angular logo">
+  <nav>
+    <a  routerLink='home'>Home</a>
+    <a  routerLink='about'>About</a>
+    <a  routerLink='./login'>Login</a>
+    <a  routerLink='contact'>Contact</a>
+  </nav>
+</div>
+
+<div id="sidebar">
+  <div id="open_slide">
+    <a  id="toggle_btn" (click)="toggleSlideMenu()">&#9776;</a>
+  </div>
+
+  <ul *ngIf="!isOpen">
+    <li><a class="close_button" (click)="toggleSlideMenu()">&times;</a> </li>
+    <li><a routerLink='home'>Home</a></li>
+    <li><a routerLink='about'>About</a></li>
+    <li><a routerLink='services'>Services</a></li>
+    <li><a routerLink='contact'>Contact</a></li>
+  </ul>
+
+
+</div>
